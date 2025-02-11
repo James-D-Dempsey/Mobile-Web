@@ -1,0 +1,36 @@
+/*https://colorhunt.co/palette/27445d497d7471bbb2efe9d5     Color Palette*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+header {
+    background-color: #27445D;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex: 1; 
+}
+
+main {
+    flex: 7;
+    background-color: #EFE9D5;
+    padding: 20px;
+}
+
+aside {
+    flex: 3;
+    background-color: #497D74;
+    padding: 20px;
+}
