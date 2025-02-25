@@ -1,4 +1,12 @@
 /*https://colorhunt.co/palette/27445d497d7471bbb2efe9d5     Color Palette*/
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }  
 
 body {
     margin: 0;
@@ -6,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh; 
+    min-height: 100vh;
 }
 
 header {
@@ -16,21 +25,86 @@ header {
     font-size: 24px;
     font-weight: bold;
     width: 100%;
+    order: 0;
 }
 
 .container {
     display: flex;
-    flex: 1; 
+    flex: 1;
 }
 
 main {
     flex: 7;
     background-color: #EFE9D5;
     padding: 20px;
+    order: 0;
+}
+
+.assignments{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;  
+    }
+
+.col {
+    padding:20px;
+    border:1px solid #c0c0c0;
+    border-radius:6px;
 }
 
 aside {
     flex: 3;
     background-color: #497D74;
     padding: 20px;
+    order: 1;
 }
+
+#footer {
+	background-color: #000;
+	color: #FFF;
+	height: 25px;
+    width: 100%;
+    order: 2;
+}
+#footer h6 {
+	font-size: 12px;
+	line-height: 25px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+@media screen and (max-width:600px){
+    .assignments{
+      grid-template-columns: 1fr;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    aside {
+        order: 1; 
+    }
+
+    main {
+        order: 0;
+    }
+  }
+  
+  @media screen and (min-width:601px) and (max-width:800px){
+    .assignments{
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .container{
+        flex-direction: column;
+    }
+
+        aside {
+            order: 1; 
+        }
+
+        main {
+            order: 0;
+        }
+    }

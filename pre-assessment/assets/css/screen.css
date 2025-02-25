@@ -40,10 +40,6 @@ body {
     display: block; 
 }
 
-#header h1 a {
-	
-}
-
 .hide-text {
 	text-indent: 100%;
 	white-space: nowrap;
