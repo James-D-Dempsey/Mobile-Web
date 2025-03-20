@@ -5,6 +5,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="James Dempsey's personal website showcasing skills, experience, and education.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "James Dempsey",
+      "givenName": "James",
+      "familyName": "Dempsey",
+      "image": "resume/assets/img/jamesdempsey_headshot.png",
+      "description": "I am a Computer Science Undergraduate student. I am in an officer role for the 
+      Aerospace Club at UA Little Rock and the Trojan eSports Club at UA Little Rock. I also work as a Developer
+      for the Emerging Analytics Center.",
+      "birthDate": "2004-07-22",
+      "nationality": "United States",
+      "homeLocation": {
+        "@type": "Little Rock",
+        "address": {
+          "@type": "72202",
+          "addressLocality": "Arkansas",
+          "addressCountry": "USA"
+        }
+      },
+      "telephone": "870-489-5177",
+      "email": "jjdempsey@ualr.edu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2202 S Taylor",
+        "addressLocality": "Little Rock",
+        "postalCode": "72204",
+        "addressCountry": "USA"
+      },
+      "url": "https://github.com/James-D-Dempsey",
+      "sameAs": [
+        "https://github.com/James-D-Dempsey",
+        "https://www.linkedin.com/in/james-dempsey-9061b4327/"
+      ],
+      "knowsAbout": ["c#", "Python", "SQL", "c++", "Unity", "Sci-Kit Learn", "CuPy", "CuDF", "RAPIDS"],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Emerging Analytics Center",
+          "jobTitle": "Undergraduate Developer",
+          "startDate": "2024-08-028",
+          "description": "I was tasked with developing an augmented reality (AR) application designed to 
+          simulate realistic bugs in real-time through a mobile device camera. To accomplish this, I 
+          independently learned Unity and C#, implemented real-time AR functionality, and utilized Git for 
+          version control to streamline collaboration and manage project updates. My efforts resulted in a 
+          functional AR application showcased at an expo, where I spent three hours demonstrating and 
+          explaining the technology to attendees. Additionally, I was responsible for creating an interactive 
+          software application to showcase and compare the newly constructed Trojan Way with its previous 
+          state.",
+          "url": "https://eac.ualr.edu/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Arkansas, USA"
+          }
+        }
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University Name 1",
+        "description": "BA Web Design and Development",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Anywhere, USA"
+        },
+        "startDate": "2005-01-01",
+        "endDate": "2007-01-01"
+      }
+    }
+    </script>
+
   <title>James Dempsey - Resume</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -19,10 +91,18 @@
       <li><a href="#education">Education</a></li>
      </ul>  
     </nav>
+
+    <script>
+      document.querySelector(".menu-toggle").addEventListener("click", function() {
+          document.querySelector("nav ul").classList.toggle("show");
+      });
+  </script>
+
   </header>
   <!-- Main -->
   <main itemscope itemtype="http://schema.org/Person" class="container">
     <h1 class="page-title">James Dempsey</h1>
+    <button class="menu-toggle">☰ Menu</button>
     <section id="about">
       <h2>Personal Details</h2>
       <div class="bio">
@@ -63,7 +143,7 @@
       </dl>
       <ul class="related-links">
         <li><a itemprop="url" rel="me" href="https://github.com/James-D-Dempsey"> github</a></li>
-        <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
+        <li><a itemprop="url" rel="me" href="https://www.linkedin.com/in/james-dempsey-9061b4327/"">linkedin</a></li>
         <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
       </ul>
     </section>
@@ -73,7 +153,7 @@
         <li class="skill">c#</li>
         <li class="skill">Python</li>
         <li class="skill">SQL</li>
-        <li class="skill">Python</li>
+        <li class="skill">c++</li>
         <li class="skill">Unity</li>
         <li class="skill">Sci-Kit learn</li>
         <li class="skill">CuPy</li>
@@ -97,6 +177,7 @@
               <li>Delivered a functional AR application showcased at an expo, where I spent 3 hours demonstrating and explaining the technology to attendees.</li>
               <li>Tasked with creating an interactive software application to showcase and compare the newly constructed Trojan Way with its previous state.</li>
             </ul>
+            <img class="experience-image" src="assets/css/js/img/EACLogo.png" alt="AR Development Showcase">
           </p>
           <span itemprop="location" itemscope itemtype="http://schema.org/Place">
             <a itemprop="url" href="https://eac.ualr.edu/">eac.ualr.edu</a>

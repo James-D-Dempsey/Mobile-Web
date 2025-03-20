@@ -28,30 +28,47 @@ header {
     text-align: center;
 }
 
+nav {
+    background: #222;
+    padding: 10px;
+}
+
 nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0;
-    border-right:  solid #fff; 
-    padding: 0 15px;
-    list-style-type: none;
-}
-
-nav ul li:first-child {
-    border-left: 2px solid #fff; 
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li a {
+    display: block;
+    padding: 10px 15px;
     color: #fff;
     text-decoration: none;
-    padding: 8px 16px; 
-    display: block;
-    text-align: center;
+    border-bottom: 1px solid #444;
+    width: 100%;
+}
 
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
 }
 
 main {
@@ -81,7 +98,9 @@ h2 {
 }
 
 .bio img {
-    max-width: 100px;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -109,6 +128,13 @@ h2 {
     text-decoration: none;
 }
 
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
 .skill {
     display: inline-block;
     background: #333;
@@ -116,6 +142,8 @@ h2 {
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px 0;
+    font-size: 14px;
+    text-align: center;
 }
 
 .job, .certificate {
@@ -133,6 +161,30 @@ li {
     font-size: 12px;
 }
 
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.experience-text {
+    flex: 1; 
+    max-width: 60%; 
+}
+
+.experience-image {
+    flex-shrink: 0;
+    width: 40%; 
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -148,44 +200,65 @@ footer a {
 
 /* ---------------------- MEDIA QUERIES ------------------------ */
 
-@media screen and (min-width: 768){
+@media screen and (max-width: 768){
 
-
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        text-align: center;
+        width: 100%;
+        background: #222;
+        border-bottom: 1px solid #444;
+    }
 
 }
 
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    nav ul li {
+        border: none;
+    }
+    
+    nav ul li a {
+        padding: 10px 20px;
+        border-bottom: none;
+    }
 
-
-
-/*nav {
-  padding: 1px;
+    .bio img {
+        width: 150px; 
+    }
 }
 
-nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 20px 20px 0px 20px;
-}
+@media screen and (min-width: 1024px) {
+    .skill-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-wrap: wrap; 
+        width: 100%;
+    }
 
-nav li {
-  list-style-type: none;
+    .skill {
+        font-size: 18px;
+        padding: 10px 20px;
+        min-width: 120px;
+    }
 }
-
-nav a:link, nav a:visited {
-  display: block;
-  padding: 8px 16px;
-  border: 1px solid #000;
-  text-align: center;
-  text-decoration: none;
-  color: #222222;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: rgba(0, 0, 0, 0.65);
-  transition: background-color 0.5s ease;
-  color: #ffffff;
-}
-
-nav a:hover {
-  background: rgba(0, 0, 0, 0.95);
-}
-*/
