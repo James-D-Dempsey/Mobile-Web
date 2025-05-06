@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Native Audio and Video</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+
+</head>
+<body>
+  <h1>Native Audio and Video Demos</h1>
+
+  <section>
+    <h2>Audio Demo</h2>
+    <audio controls>
+      <source src="assets/video/audio/thunder.ogg" type="audio/ogg">
+      <source src="assets/video/audio/thunder.mp3" type="audio/mpeg">
+      <source src="assets/video/audio/thunder.wav" type="audio/wav">
+        You might have the most ancient browser in the world, or you might have JavaScript disabled. Either way, you can't play this audio.
+
+    </audio>
+  </section>
+
+  <section>
+    <h2>Video Demo</h2>
+    <video controls width="640" height="360">
+      <source src="assets/video/hudson-shelter-falls.mp4" type="video/mp4">
+      <source src="assets/video/hudson-shelter-falls.webm" type="video/webm">
+      <source src="assets/video/hudson-shelter-falls.ogv" type="video/ogg">
+        You might have the most ancient browser in the world, or you might have JavaScript disabled. Either way, you can't play this video.
+    </video>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mediaElements = document.querySelectorAll('audio, video');
+      for (const el of mediaElements) {
+        new MediaElementPlayer(el);
+      }
+    });
+  </script>
+</body>
+</html>
