@@ -1,71 +1,120 @@
-header {
-    background-color: #27445D;
-    color: white;
-    text-align: left;
-    padding: 15px;
-    font-size: 24px;
-    font-weight: bold;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
 }
-  nav {
-    background-color: #000;
-    
-  }
-  nav ul {
-    list-style-type: none;
-    margin-left: 10px;
-  }
-  nav ul li {
-    display: inline;
-    height: 35px;
-    line-height: 35px;
-  }
-  nav ul li a {
-    display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 18px;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  body {
-    margin: 40px;
-  }
-  
-  .wrapper {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: [col1-start] 300px  [col2-start] 300px  [col3-start] 300px [col3-end];
-      grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row3-end];
-      background-color: #fff;
-      color: #444;
-    }
-  
-    .box {
-      background-color: #444;
-      color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      font-size: 150%;
-  
-    }
-  
-    .a {
-      grid-column: col1-start / col3-start;
-      grid-row: row1-start ;
-    }
-    .b {
-      grid-column: col3-start ;
-      grid-row: row1-start / row2-end;
-    }
-    .c {
-      grid-column: col1-start;
-      grid-row: row2-start ;
-    }
-    .d {
-      grid-column: col2-start ;
-      grid-row: row2-start ;
-    }
+/*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Start of "Micro clearfix" */
 
-    .e {
-      grid-column: col1-start / col3-start;
-      grid-row: row3-start;
-    }
+.cf {
+  zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* End of "Micro clearfix" */
+
+
+.container {
+  width:950px;
+  /* background: url("imgs/final_grid.png"); */   /* Uncomment to see the grid (Does not scale with media queries)*/
+  border: 1px solid #000;
+  margin: 20px auto;
+}
+
+header.primary {
+  width: 93.68421%; /* 890px / 950px*/
+  background: rgba(0, 0, 0, 0.4);
+  margin: 3.15789%; /* 30px / 950px*/
+  padding: 1.05263%; /* 10px / 950px*/
+  float: left;
+}
+
+#content {
+  width: 62.10526%; /* 50 * 10 + 10 * 10 / 950px*/
+  background: rgba(0, 0, 0, 0.6);
+  margin-left: 3.15789%;
+  padding: 1.05263%;
+  float: left;
+}
+
+aside {
+  width: 30.5263%; /* 5*50 + 4*10 / 950px*/
+  background: rgba(0, 0, 0, 0.3);
+  margin-left: 1.05263%;
+  padding: 1.05263%;
+  float: left;
+}
+
+footer.primary {
+  width: 93.68421%; /* 890px / 950px*/
+  background: rgba(0, 0, 0, 0.4);
+  margin: 3.15789%; /* 30px / 950px*/
+  padding: 1.05263%; /* 10px / 950px*/
+  float: left;
+}
+
+.col-5 {
+  width: 30.5263%; /* 5*50 + 4*10 / 950px*/
+  background: rgba(0, 0, 0, 0.3);
+  margin-left: 1.05263%;
+  padding: 1.05263%;
+  float: left;
+}
+
+.col-10 {
+  width: 62.10526%; /* 50 * 10 + 10 * 10 / 950px*/
+  background: rgba(0, 0, 0, 0.6);
+  margin-left: 3.15789%;
+  padding: 1.05263%;
+  float: left;
+}
+
+.col-15 {
+  width: 93.68421%; /* 890px / 950px*/
+  background: rgba(0, 0, 0, 0.4);
+  margin: 3.15789%; /* 30px / 950px*/
+  padding: 1.05263%; /* 10px / 950px*/
+  float: left;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1500px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .container {
+    width: 2300px;
+  }
+}
+
+@media screen and (min-width: 3500px) {
+  .container {
+    width: 3000px;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Demo - Cloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Responsive Image Demo Using srcset</h1>
+
+  <img 
+    src="assets/imgs/cloud_medium.webp"
+    srcset="
+      assets/imgs/cloud_small.webp 480w,
+      assets/imgs/cloud_medium.webp 768w,
+      assets/imgs/cloud_large.webp 1032w
+    "
+    sizes="(max-width: 600px) 480px,
+           (max-width: 900px) 768px,
+           1032px"
+    alt="Cloud Strife with Buster Sword from Final Fantasy">
+
+</body>
+</html>
