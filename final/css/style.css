@@ -1,0 +1,773 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  line-height: 1.5;
+  background: url('../img/background.jpg') no-repeat center center fixed; 
+  background-size: cover;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  font: inherit;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../img/hero_small.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% auto;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.hero-content .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: 999px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.hero-content .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.logo-image {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+  /* FEATURES SECTION */
+.features {
+  padding: 4rem 1rem;
+  background: var(--green-overlay); 
+}
+
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.features-text {
+  flex: 1 1 350px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px); 
+}
+
+.features-text h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-text h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.features-text p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.features-cta {
+  margin-top: 2rem;
+}
+
+.features-cta .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: 999px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.features-cta .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.features-cta .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #000;      
+  color: #fff;          
+  border-radius: 999px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.features-cta .btn-secondary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* IMAGE */
+.features-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.features-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.how-it-works {
+  padding: 4rem 1rem;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.how-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-inner h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+/* make sure the video is responsive */
+.how-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* NAVIGATION */
+.nav {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.nav .logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.nav ul {
+  list-style: none;
+  display: flex;            
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+
+
+.nav ul li {
+  display: block;
+  margin-top: 0.75rem;
+}
+.nav ul li a {
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  display: block;       
+  padding: 0.5rem 1rem;
+}
+.nav ul li a:hover {
+  opacity: 0.7;
+}
+.nav .menu-toggle {
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.nav .logo {
+  padding: 0.5rem 1rem;
+}
+
+.site-footer {
+  position: relative;             
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(6px);     
+  color: #fff;
+  z-index: 10;                   
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 40%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-end;      
+  gap: 0.5rem;              
+  font-size: 0.95rem;
+}
+
+.footer-center span,
+.footer-center a {
+  display: block;            
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+
+/* PCB CSS Section */
+
+.step-card {
+  background-color: rgba(255, 255, 255, 0.6);  
+  backdrop-filter: blur(4px);                  
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.container.faq {
+  background-color: #222;       
+  padding: 2.5rem 2rem;            
+  border-radius: 0.75rem;         
+  max-width: 800px;                
+  margin: 4rem auto;              
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container.faq h2 {
+  font-size: 2.5rem;               
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.container.faq details summary {
+  font-size: 1.25rem;             
+  padding: 0.75rem 1rem;
+  background-color: #030303;       
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  list-style: none;               
+}
+
+.container.faq details p {
+  font-size: 1rem;                
+  line-height: 1.6;
+  padding: 0.5rem 1.5rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.container.faq details summary::-webkit-details-marker {
+  display: none;
+}
+.container.faq details summary::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.2s ease;
+}
+.container.faq details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/*Contact CSS Section */
+.team-section {
+  padding: 2rem 1rem;
+}
+.team-section h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.contact-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+.contact-card h3 {
+  margin-bottom: 0.5rem;
+}
+.contact-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+.contact-card a {
+  color: #1eaaf1;
+  text-decoration: none;
+}
+
+.contact-card .card-inner {
+  display: flex;
+  align-items: flex-start;    
+  gap: 1rem;                   
+}
+
+.contact-card img {
+  width: 120px;              
+  height: auto;
+  object-fit: cover;  
+  border-radius: 50%;          
+}
+
+.contact-card .contact-info {
+  flex: 1;
+}
+
+.contact-card .description {
+  margin-top: 0.5em;
+  color: #fff;                 
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.contact-card .learn-more a {
+  display: inline-block;
+  margin-top: 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007ACC;          
+}
+.contact-card .learn-more a:hover {
+  text-decoration: underline;
+}
+
+.learn-more a {
+  color: white;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.titles {
+  font-family: 'Montserrat', sans-serif;  
+  font-size: 4rem;                        
+  font-weight: 700;                       
+  margin-bottom: 1rem;                  
+}
+
+
+@media (min-width: 600px){
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../img/hero_med.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% auto;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  
+  .nav ul {
+    display: flex !important;    
+    flex-direction: row;          
+    gap: 1.5rem;                 
+    padding: 0;                 
+
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(6px);      
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    width: fit-content; 
+  }
+
+  .nav ul li a.active {
+    background-color: rgba( 0, 0, 0, 0.9);
+    padding: 0.5rem 1rem;                      
+    color: rgb(255, 255, 255);
+  }
+  
+  .nav .menu-toggle {
+    display: none;
+  }
+  .nav ul li {
+    margin: 0 1rem;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .logo-image {
+    margin-left: 10%;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../img/hero_large.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30% auto;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .features-text, .features-image {
+    flex: 1 1 100%;
+  }
+  .features-cta .btn {
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+}
